@@ -5,5 +5,14 @@
 # valid-gtin
 A zero cost lightweight validator function for GTINs
 
+# Usage
+```javascript
+const validate = require("valid-gtin")
+
+if (validate(GTIN)) {
+  console.log(":)")
+}
+```
+
 # CLI
 `valid_gtin <gtin>`
