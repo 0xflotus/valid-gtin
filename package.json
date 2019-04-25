@@ -4,8 +4,11 @@
     "valid_gtin": "./cli.js"
   },
   "author": "0xflotus",
-  "keywords": ["gtin", "validate"],
-  "version": "0.0.1",
+  "keywords": [
+    "gtin",
+    "validate"
+  ],
+  "version": "0.0.2",
   "main": "index.js",
   "license": "MIT"
 }
