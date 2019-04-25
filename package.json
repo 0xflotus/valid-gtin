@@ -12,7 +12,7 @@
     "type": "git",
     "url": "https://github.com/0xflotus/valid-gtin"
   },
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "index.js",
   "license": "MIT"
 }
