@@ -3,6 +3,9 @@
   "bin": {
     "valid_gtin": "./cli.js"
   },
+  "scripts": {
+    "test": "jest"
+  },
   "author": "0xflotus",
   "keywords": [
     "gtin",
@@ -14,5 +17,8 @@
   },
   "version": "0.0.8",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.7.1"
+  }
 }
