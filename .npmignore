@@ -1,2 +1,3 @@
 *.test.js
 .gitignore
+yarn.lock
