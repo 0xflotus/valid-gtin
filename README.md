@@ -2,7 +2,7 @@
 ![dependents](https://badgen.net/npm/dependents/valid-gtin)
 
 # valid-gtin
-A zero cost lightweight validator function for GTINs
+A zero cost lightweight validator function in native javascript for GTINs
 
 # Usage
 ```javascript
@@ -15,3 +15,9 @@ if (validate(GTIN)) {
 
 # CLI
 `valid_gtin <gtin>`
+
+# Development
+
+To run the tests please checkout this repository and run:
+
+`npm run test`
