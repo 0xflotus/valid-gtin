@@ -1,7 +1,7 @@
 const validate = require("./index");
 
 test("Should be valid GTINs", () => {
-  const VALIDS = ["97350053850012", "012345678905"];
+  const VALIDS = ["97350053850012", "012345678905", "9783030148270"];
   VALIDS.forEach(gtin => expect(validate(gtin)).toBe(true));
 });
 
