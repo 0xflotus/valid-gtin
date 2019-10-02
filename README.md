@@ -1,6 +1,7 @@
 [![npm version](https://badge.fury.io/js/valid-gtin.svg)](https://badge.fury.io/js/valid-gtin)
 ![valid-gtin](https://badgen.net/bundlephobia/minzip/valid-gtin@latest)
 ![dependents](https://badgen.net/npm/dependents/valid-gtin)
+![Scc Count Badge](https://sloc.xyz/github/0xflotus/valid-gtin/)
 
 # valid-gtin
 A zero cost lightweight validator function in native javascript for GTINs
