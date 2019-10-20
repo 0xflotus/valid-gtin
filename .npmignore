@@ -1,3 +1,4 @@
 *.test.js
 .gitignore
 yarn.lock
+.travis.yml
