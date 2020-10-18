@@ -1,5 +1,5 @@
 [![npm version](https://badge.fury.io/js/valid-gtin.svg)](https://badge.fury.io/js/valid-gtin)
-[![Build Status](https://travis-ci.org/0xflotus/valid-gtin.svg?branch=master)](https://travis-ci.org/0xflotus/valid-gtin)
+[![Build Status](https://img.shields.io/travis/0xflotus/valid-gtin?branch=master&label=Travis%20CI&logo=Travis%20CI&logoColor=ffffff&labelColor=282828)]()
 ![valid-gtin](https://badgen.net/bundlephobia/minzip/valid-gtin@latest)
 ![dependents](https://badgen.net/npm/dependents/valid-gtin)
 ![Scc Count Badge](https://sloc.xyz/github/0xflotus/valid-gtin/)
