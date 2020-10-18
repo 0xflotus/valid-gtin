@@ -1,6 +1,7 @@
 [![npm version](https://badge.fury.io/js/valid-gtin.svg)](https://badge.fury.io/js/valid-gtin)
 [![Build Status](https://img.shields.io/travis/0xflotus/valid-gtin?branch=master&label=Travis%20CI&logo=Travis%20CI&logoColor=ffffff&labelColor=282828)]()
 ![valid-gtin](https://badgen.net/bundlephobia/minzip/valid-gtin@latest)
+[![code size in bytes](https://img.shields.io/github/languages/code-size/0xflotus/valid-gtin?branch=master&label=Code%20Size&logo=GitHub&logoColor=ffffff&labelColor=282828&style=flat)]()
 ![dependents](https://badgen.net/npm/dependents/valid-gtin)
 ![Scc Count Badge](https://sloc.xyz/github/0xflotus/valid-gtin/)
 
