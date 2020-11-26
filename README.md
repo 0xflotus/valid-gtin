@@ -29,4 +29,4 @@ To run the tests please checkout this repository and run:
 
 ## Stargazers over time
 
-[![Stargazers over time](https://starchart.cc/0xflotus/jsonbox-node.svg)](https://starchart.cc/0xflotus/valid-gtin)
+[![Stargazers over time](https://starchart.cc/0xflotus/valid-gtin.svg)](https://starchart.cc/0xflotus/valid-gtin)
