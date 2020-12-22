@@ -15,9 +15,10 @@ jobs:
   allow_failures:
     - os: 
       - windows
-      - freebsd
     - node_js:
       - 11
+    - os: 
+      - freebsd
 arch:
   - amd64
   - arm64
