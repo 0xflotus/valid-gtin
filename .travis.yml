@@ -13,10 +13,10 @@ os:
   - windows
 jobs:
   allow_failures:
-    os: 
+    - os: 
       - windows
       - freebsd
-    node_js:
+    - node_js:
       - 11
 arch:
   - amd64
