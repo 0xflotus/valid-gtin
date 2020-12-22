@@ -16,6 +16,8 @@ jobs:
   - os: 
     - windows
     - freebsd
+  - node_js:
+    - 11
 arch:
   - amd64
   - arm64
