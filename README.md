@@ -7,6 +7,7 @@
 ![Scc Count Badge](https://sloc.xyz/github/0xflotus/valid-gtin/)
 
 # valid-gtin
+
 A zero cost lightweight validator function in native javascript for GTINs
 
 # Usage
