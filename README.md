@@ -10,7 +10,8 @@
 
 A zero cost lightweight validator function in native javascript for GTINs
 
-# Usage
+## Usage
+
 ```javascript
 const validate = require("valid-gtin")
 
@@ -19,10 +20,11 @@ if (validate(GTIN)) {
 }
 ```
 
-# CLI
+## CLI
+
 `valid_gtin <gtin>`
 
-# Development
+## Development
 
 To run the tests please checkout this repository and run:
 
