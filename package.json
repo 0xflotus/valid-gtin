@@ -19,6 +19,6 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "jest": "^27.4.4"
+    "jest": "^27.4.5"
   }
 }
