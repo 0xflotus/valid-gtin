@@ -1,6 +1,4 @@
 *.test.js
 .gitignore
 yarn.lock
-.travis.yml
 .github/
-.circleci/
