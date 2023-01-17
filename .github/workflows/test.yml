@@ -7,7 +7,10 @@ on:
     paths:
       - "**.js"
   pull_request:
-    branches: [master]
+    branches: 
+      - master
+    paths:
+      - "**.js"
 
 jobs:
   build:
