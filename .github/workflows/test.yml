@@ -3,12 +3,12 @@ name: Testing
 on:
   push:
     branches: 
-      - master
+      - main
     paths:
       - "**.js"
   pull_request:
     branches: 
-      - master
+      - main
     paths:
       - "**.js"
 
