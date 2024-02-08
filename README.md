@@ -33,7 +33,3 @@ To run the tests please checkout this repository and run:
 ## Stargazers over time
 
 [![Stargazers over time](https://starchart.cc/0xflotus/valid-gtin.svg)](https://starchart.cc/0xflotus/valid-gtin)
-
-## Visualization of the codebase
-
-![Visualization of the codebase](./diagram.svg)
