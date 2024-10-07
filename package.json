@@ -1,9 +1,10 @@
 {
   "name": "valid-gtin",
   "bin": {
-    "valid_gtin": "./cli.js"
+    "valid_gtin": "./dist/cli.js"
   },
   "scripts": {
+    "build": "tsc",
     "test": "jest"
   },
   "author": "0xflotus",
@@ -16,9 +17,12 @@
     "url": "https://github.com/0xflotus/valid-gtin"
   },
   "version": "0.0.17",
-  "main": "index.js",
+  "main": "dist/index.js",
   "license": "MIT",
   "devDependencies": {
-    "jest": "^29.7.0"
+    "@types/jest": "^29.5.13",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.6.2"
   }
 }
