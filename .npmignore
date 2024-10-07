@@ -1,12 +1,5 @@
-node_modules/
-*.ts
-*.test.js
-.gitignore
-yarn.lock
-.github/
-.circleci/
-eslint.config.mjs
-jest.config.js
-package-lock.json
-tsconfig.json
-yarn.lock
+!package.json
+!package-lock.json
+!dist/
+!README.md
+!LICENSE
