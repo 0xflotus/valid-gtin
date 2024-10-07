@@ -1,5 +1,6 @@
-*.test.js
-.gitignore
-yarn.lock
-.github/
-.circleci/
+*
+!package.json
+!package-lock.json
+!dist/
+!README.md
+!LICENSE
