@@ -4,6 +4,8 @@
     "valid_gtin": "./dist/cli.js"
   },
   "scripts": {
+    "clean": "rm -rf dist",
+    "prepublishOnly": "yarn run clean && yarn run build",
     "build": "tsc",
     "test": "jest"
   },
