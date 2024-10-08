@@ -11,10 +11,10 @@ on:
       - main
 
 jobs:
-  strategy:
-    matrix:
-      version: [18, 20, 22]
   build:
+    strategy:
+      matrix:
+        version: [18, 20, 22]
     name: Testing
     runs-on: ubuntu-latest
     steps:
