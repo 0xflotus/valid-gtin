@@ -13,8 +13,9 @@ jobs:
     strategy:
       matrix:
         version: [18, 20, 22]
+        os: [ubuntu-latest, ubuntu-24.04, ubuntu-22.04]
     name: Testing
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
       - name: Testing with Node ${{ matrix.version }}
