@@ -4,9 +4,23 @@ on:
   push:
     branches:
       - main
+    paths:
+      - '*.mjs'
+      - '*.js'
+      - '*.ts'
+      - '.github/workflows/*.yml'
+      - 'package.json'
+      - 'tsconfig.json'
   pull_request:
     branches:
       - main
+    paths:
+      - '*.mjs'
+      - '*.js'
+      - '*.ts'
+      - '.github/workflows/*.yml'
+      - 'package.json'
+      - 'tsconfig.json'
 
 jobs:
   build:
