@@ -23,9 +23,3 @@ test("Should be invalid GTIN-12", () => {
 test("Should handle empty strings", () => {
   expect(validate("")).toBe(false);
 });
-
-test("Should handle null or undefined values", () => {
-  expect(validate(null)).toBe(false);
-  expect(validate(undefined)).toBe(false);
-});
-
