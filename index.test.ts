@@ -25,7 +25,7 @@ test("Should handle empty strings", () => {
 });
 
 test("Should handle null or undefined values", () => {
-  expect(validate(null as any)).toBe(false);
-  expect(validate(undefined as any)).toBe(false);
+  expect(validate(null)).toBe(false);
+  expect(validate(undefined)).toBe(false);
 });
 
