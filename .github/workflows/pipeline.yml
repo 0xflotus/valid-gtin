@@ -33,7 +33,7 @@ jobs:
           fetch-depth: 0
             
       - name: Lint Code Base
-        run: npm run lint
+        run: npm i && npm run lint
   build:
     strategy:
       matrix:
