@@ -23,7 +23,18 @@ on:
       - 'tsconfig.json'
 
 jobs:
+  lint:
+    name: Lint Code Base
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Lint Code Base
+        run: npm install && npm run lint
   build:
+    needs: lint
     strategy:
       matrix:
         version: [18, 20, 22]
