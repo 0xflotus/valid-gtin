@@ -23,7 +23,7 @@
   "main": "dist/index.js",
   "license": "MIT",
   "devDependencies": {
-    "@eslint/js": "9.36.0",
+    "@eslint/js": "9.37.0",
     "@types/eslint__js": "9.14.0",
     "@types/jest": "30.0.0",
     "eslint": "9.37.0",
