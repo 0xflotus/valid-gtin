@@ -25,7 +25,7 @@ on:
 jobs:
   lint:
     name: Lint Code Base
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
@@ -38,7 +38,7 @@ jobs:
     strategy:
       matrix:
         version: [18, 20, 22]
-        os: [ubuntu-latest, ubuntu-24.04, ubuntu-22.04]
+        os: [ubuntu-latest, ubuntu-24.04, ubuntu-22.04, ubuntu-slim]
     name: Testing
     runs-on: ${{ matrix.os }}
     steps:
