@@ -1,14 +1,10 @@
 {
   "name": "valid-gtin",
-  "bin": {
-    "valid_gtin": "./dist/cli.js"
-  },
+  "type": "module",
   "scripts": {
-    "clean": "rimraf dist",
-    "prepublishOnly": "npm run clean && npm run build",
-    "build": "tsc",
-    "test": "jest",
-    "lint": "eslint"
+    "prepublishOnly": "npm run lint && npm run test",
+    "lint": "eslint",
+    "test": "vitest"
   },
   "author": "0xflotus",
   "keywords": [
@@ -20,18 +16,11 @@
     "url": "https://github.com/0xflotus/valid-gtin"
   },
   "version": "0.0.17",
-  "main": "dist/index.js",
+  "main": "index.js",
   "license": "MIT",
   "devDependencies": {
     "@eslint/js": "10.0.1",
-    "@types/eslint__js": "9.14.0",
-    "@types/jest": "30.0.0",
     "eslint": "10.0.0",
-    "globals": "17.3.0",
-    "jest": "30.2.0",
-    "rimraf": "6.1.2",
-    "ts-jest": "29.4.6",
-    "typescript": "5.9.3",
-    "typescript-eslint": "8.55.0"
+    "vitest": "^4.0.18"
   }
 }

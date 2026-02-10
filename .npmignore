@@ -1,6 +1,5 @@
 *
 !package.json
 !package-lock.json
-!dist/
 !README.md
 !LICENSE
