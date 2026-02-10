@@ -4,7 +4,7 @@
   "scripts": {
     "prepublishOnly": "npm run lint && npm run test",
     "lint": "eslint",
-    "test": "vitest"
+    "test": "vitest run"
   },
   "author": "0xflotus",
   "keywords": [
