@@ -5,22 +5,18 @@ on:
     branches:
       - main
     paths:
-      - '*.mjs'
-      - '*.js'
-      - '*.ts'
-      - '.github/workflows/*.yml'
-      - 'package.json'
-      - 'tsconfig.json'
+      - "*.mjs"
+      - "*.js"
+      - ".github/workflows/*.yml"
+      - "package.json"
   pull_request:
     branches:
       - main
     paths:
-      - '*.mjs'
-      - '*.js'
-      - '*.ts'
-      - '.github/workflows/*.yml'
-      - 'package.json'
-      - 'tsconfig.json'
+      - "*.mjs"
+      - "*.js"
+      - ".github/workflows/*.yml"
+      - "package.json"
 
 jobs:
   lint:
@@ -28,7 +24,7 @@ jobs:
     runs-on: ubuntu-slim
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Lint Code Base
@@ -37,7 +33,7 @@ jobs:
     needs: lint
     strategy:
       matrix:
-        version: [18, 20, 22, 24]
+        version: [20, 22, 24]
         os: [ubuntu-latest, ubuntu-24.04, ubuntu-22.04, ubuntu-slim]
     name: Testing
     runs-on: ${{ matrix.os }}
@@ -47,5 +43,5 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.version }}
-      - run: npm install jest
+      - run: npm install
       - run: npm test
