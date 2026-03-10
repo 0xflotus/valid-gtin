@@ -1,21 +1,9 @@
-export const validate = (g) => {
-  if (!g || typeof g !== "string") {
-    return false;
-  }
+export const validate = g => {
+  if (typeof g !== "string" || !/^\d{8}$|^\d{12,14}$/.test(g)) return false;
 
-  const arr = g.split("").map(Number);
+  const digits = [...g].map(Number);
+  const check = digits.pop();
+  const sum = digits.reverse().reduce((s, d, i) => s + d * (i % 2 ? 1 : 3), 0);
 
-  if (arr.some(isNaN)) {
-    return false;
-  }
-
-  return (
-    !!/(^\d{8}$|^\d{12,14}$)/.test(g) &&
-    arr.pop() ===
-      10 -
-        (arr
-          .reverse()
-          .map((v, i) => v * (i % 2 === 0 ? 3 : 1))
-          .reduce((a, b) => a + b, 0) % 10 || 10)
-  );
+  return check === (10 - (sum % 10) || 10);
 };
