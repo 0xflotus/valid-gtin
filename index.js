@@ -14,7 +14,7 @@ export const validate = (g) => {
     arr.pop() ===
       10 -
         (arr
-          .reverse()
+          .toReversed()
           .map((v, i) => v * (i % 2 === 0 ? 3 : 1))
           .reduce((a, b) => a + b, 0) % 10 || 10)
   );
