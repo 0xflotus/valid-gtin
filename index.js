@@ -3,7 +3,7 @@ export const validate = g => {
 
   const digits = [...g].map(Number);
   const check = digits.pop();
-  const sum = digits.reverse().reduce((s, d, i) => s + d * (i % 2 ? 1 : 3), 0);
+  const sum = digits.toReversed().reduce((s, d, i) => s + d * (i % 2 ? 1 : 3), 0);
 
   return check === (10 - (sum % 10) || 10);
 };
