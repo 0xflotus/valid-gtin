@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest";
 
 describe("GTIN Validation", () => {
   it.each([
-    ["12345670", true],
+    ["12345679", true],
     ["96385074", true],
     ["75395124", true],
     ["012345678905", true],
