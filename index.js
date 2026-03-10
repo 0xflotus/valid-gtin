@@ -1,5 +1,5 @@
 export const validate = g => {
-  if (typeof g !== "string" || g.length === 0 || !/^\d{8}$|^\d{12,14}$/.test(g)) return false;
+  if (typeof g !== "string" || !/^\d{8}$|^\d{12,14}$/.test(g)) return false;
 
   const digits = [...g].map(Number);
   const check = digits.pop();
