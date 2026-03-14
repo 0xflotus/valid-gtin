@@ -31,10 +31,10 @@ jobs:
     runs-on: ubuntu-slim
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: npm
@@ -45,14 +45,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        version: [20, 22, 24]
+        version: [22, 24]
         os: [ubuntu-latest, ubuntu-22.04]
     name: Testing
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Testing with Node ${{ matrix.version }}
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.version }}
           cache: npm
