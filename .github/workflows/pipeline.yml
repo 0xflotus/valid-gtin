@@ -26,6 +26,18 @@ permissions:
   contents: read
 
 jobs:
+  size:
+    name: Check Size
+    runs-on: ubuntu-slim
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npx size-limit
   lint:
     name: Lint Code Base
     runs-on: ubuntu-slim
@@ -40,14 +52,14 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run lint
-  build:
-    needs: lint
+  test:
+    name: Testing
+    needs: lint, size
     strategy:
       fail-fast: false
       matrix:
         version: [22, 24]
         os: [ubuntu-latest, ubuntu-22.04]
-    name: Testing
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v6

@@ -1,0 +1,6 @@
+module.exports = [
+  {
+    path: 'index.js',
+    limit: '250 B'
+  }
+];
