@@ -12,10 +12,10 @@ A zero cost lightweight validator function in native javascript for GTINs
 ## Usage
 
 ```javascript
-import { validate } from "valid-gtin";
+import { validate } from 'valid-gtin';
 
 if (validate(GTIN)) {
-  console.log(":)");
+  console.log(':)');
 }
 ```
 
