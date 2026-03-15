@@ -20,6 +20,7 @@
     "@eslint/js": "10.0.1",
     "@vitest/coverage-v8": "4.1.0",
     "eslint": "10.0.3",
+    "fast-check": "4.6.0",
     "vitest": "4.1.0"
   }
 }
