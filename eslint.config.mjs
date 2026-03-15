@@ -1,13 +1,9 @@
-import pluginJs from "@eslint/js";
+import pluginJs from '@eslint/js';
 
 export default [
   {
-    files: [
-      "**/*.js"
-    ],
-    ignores: [
-      "node_modules"
-    ],
+    files: ['**/*.js'],
+    ignores: ['node_modules']
   },
-  pluginJs.configs.recommended,
+  pluginJs.configs.recommended
 ];

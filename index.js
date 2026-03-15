@@ -1,9 +1,9 @@
 export const validate = (g) => {
-  if (!g || typeof g !== "string") {
+  if (!g || typeof g !== 'string') {
     return false;
   }
 
-  const arr = g.split("").map(Number);
+  const arr = g.split('').map(Number);
 
   if (arr.some(isNaN)) {
     return false;
