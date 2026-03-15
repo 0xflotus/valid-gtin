@@ -1,4 +1,5 @@
 import { validate } from '../index';
+import fc from 'fast-check';
 import { describe, expect, it } from 'vitest';
 
 describe('GTIN Validation', () => {
@@ -18,5 +19,33 @@ describe('GTIN Validation', () => {
     ['', false]
   ])('validate(%s) -> %s', (gtin, expected) => {
     expect(validate(gtin)).toBe(expected);
+  });
+
+  it('rejects strings containing non-numeric characters', () => {
+    fc.assert(
+      fc.property(fc.string(), (str) => {
+        if (!/^\d+$/.test(str)) {
+          expect(validate(str)).toBe(false);
+        }
+      })
+    );
+  });
+
+  it('rejects numbers with invalid length', () => {
+    fc.assert(
+      fc.property(
+        fc
+          .array(fc.integer({ min: 0, max: 9 }), {
+            minLength: 1,
+            maxLength: 20
+          })
+          .map((arr) => arr.join('')),
+        (digits) => {
+          if (![8, 12, 13, 14].includes(digits.length)) {
+            expect(validate(digits)).toBe(false);
+          }
+        }
+      )
+    );
   });
 });
