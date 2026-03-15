@@ -37,7 +37,7 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
-      - run: npx size-limit
+      - run: npm run size
   lint:
     name: Lint Code Base
     runs-on: ubuntu-slim

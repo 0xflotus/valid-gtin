@@ -6,6 +6,7 @@
     "coverage": "vitest run --coverage",
     "prepublishOnly": "npm run lint && npm run test",
     "lint": "eslint",
+    "size": "size-limit",
     "test": "vitest run"
   },
   "author": "0xflotus",
