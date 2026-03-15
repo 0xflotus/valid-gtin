@@ -2,6 +2,7 @@
   "name": "valid-gtin",
   "type": "module",
   "scripts": {
+    "coverage": "vitest run --coverage",
     "prepublishOnly": "npm run lint && npm run test",
     "lint": "eslint",
     "test": "vitest run"
@@ -20,6 +21,7 @@
   "license": "MIT",
   "devDependencies": {
     "@eslint/js": "10.0.1",
+    "@vitest/coverage-v8": "4.1.0",
     "eslint": "10.0.3",
     "vitest": "4.1.0"
   }
