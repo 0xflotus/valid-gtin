@@ -54,7 +54,9 @@ jobs:
       - run: npm run lint
   test:
     name: Testing
-    needs: lint, size
+    needs:
+      - size
+      - lint
     strategy:
       fail-fast: false
       matrix:
