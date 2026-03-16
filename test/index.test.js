@@ -61,7 +61,9 @@ describe('calculateChecksum', () => {
     ['036000291452', 2],
     ['123456789012', 2],
     ['0701197200005', 5],
-    ['10701197200002', 2]
+    ['4006381333931', 1],
+    ['10701197200002', 2],
+    ['ABC123', null],
   ])('calculateChecksum(%s) -> %s', (gtin, expected) => {
     expect(calculateChecksum(gtin)).toBe(expected);
   });
