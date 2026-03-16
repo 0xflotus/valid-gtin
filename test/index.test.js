@@ -1,4 +1,4 @@
-import { validate, calculateChecksum } from '../index';
+import { validate, calculateChecksum } from '../dist/index';
 import fc from 'fast-check';
 import { describe, expect, it, test } from 'vitest';
 
@@ -21,7 +21,7 @@ describe('GTIN Validation', () => {
     ['4006381333932', false],
     ['999999999999', false],
     ['ABC', false],
-    ['', false],
+    ['', false]
   ])('validate(%s) -> %s', (gtin, expected) => {
     expect(validate(gtin)).toBe(expected);
   });
@@ -66,7 +66,7 @@ describe('calculateChecksum', () => {
     ['0701197200005', 5],
     ['4006381333931', 1],
     ['10701197200002', 2],
-    ['ABC123', null],
+    ['ABC123', null]
   ])('calculateChecksum(%s) -> %s', (gtin, expected) => {
     expect(calculateChecksum(gtin)).toBe(expected);
   });

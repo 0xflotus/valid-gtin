@@ -4,9 +4,11 @@
   "type": "module",
   "scripts": {
     "coverage": "vitest run --coverage",
-    "prepublishOnly": "npm run lint && npm run test",
+    "prepublishOnly": "npm run lint && npm run test && npm run minify",
     "lint": "eslint",
+    "minify": "terser src/index.js -o dist/index.js -c -m",
     "size": "size-limit",
+    "pretest": "npm run minify",
     "test": "vitest run"
   },
   "author": "0xflotus",
@@ -15,7 +17,7 @@
     "validate"
   ],
   "repository": "github:0xflotus/valid-gtin",
-  "main": "index.js",
+  "main": "dist/index.js",
   "license": "MIT",
   "devDependencies": {
     "@eslint/js": "10.0.1",
@@ -24,6 +26,7 @@
     "eslint": "10.0.3",
     "fast-check": "4.6.0",
     "size-limit": "12.0.1",
+    "terser": "5.46.1",
     "vitest": "4.1.0"
   }
 }
