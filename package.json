@@ -7,6 +7,7 @@
     "prepublishOnly": "npm run lint && npm run test && npm run minify",
     "lint": "eslint",
     "minify": "terser src/index.js -o dist/index.js -c -m",
+    "presize": "npm run minify",
     "size": "size-limit",
     "pretest": "npm run minify",
     "test": "vitest run"
