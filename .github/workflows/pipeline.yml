@@ -26,6 +26,12 @@ permissions:
   contents: read
 
 jobs:
+  commitlint:
+    name: Commitlint
+    runs-on: ubuntu-slim
+    steps:
+      - uses: actions/checkout@v6
+      - uses: wagoid/commitlint-github-action@v6
   size:
     name: Check Size
     runs-on: ubuntu-slim
@@ -41,6 +47,7 @@ jobs:
   lint:
     name: Lint Code Base
     runs-on: ubuntu-slim
+    needs: commitlint
     steps:
       - name: Checkout Code
         uses: actions/checkout@v6
