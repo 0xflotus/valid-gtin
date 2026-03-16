@@ -1,4 +1,4 @@
-import { validate, calculateChecksum } from '../dist/index';
+import { validate, calculateChecksum } from '../src/index';
 import fc from 'fast-check';
 import { describe, expect, it, test } from 'vitest';
 
