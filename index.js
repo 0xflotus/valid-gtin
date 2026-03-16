@@ -1,3 +1,21 @@
+/**
+ * Calculates the GTIN checksum digit using the standard GS1 algorithm.
+ * The function expects a GTIN string (8, 12, 13 or 14 digits) and calculates
+ * the checksum based on all digits except the last one.
+ *
+ * @param {string} gtin - The GTIN code as a numeric string.
+ * @returns {number|null} The calculated checksum digit (0–9) or null if the input is invalid.
+ *
+ * @example
+ * // GTIN-13 example
+ * calculateChecksum("4006381333931")
+ * // → 1
+ *
+ * @example
+ * // Invalid input
+ * calculateChecksum("ABC123")
+ * // → null
+ */
 export const calculateChecksum = (gtin) => {
   if (!gtin || typeof gtin !== 'string') {
     return null;
@@ -24,6 +42,27 @@ export const calculateChecksum = (gtin) => {
   return calculated;
 };
 
+/**
+ * Validates a GTIN by comparing its checksum digit with the calculated one.
+ *
+ * @param {string} g - The GTIN code as a numeric string (8, 12, 13 or 14 digits).
+ * @returns {boolean} Returns true if the GTIN has a valid checksum, otherwise false.
+ *
+ * @example
+ * // Valid GTIN-13
+ * validate("4006381333931")
+ * // → true
+ *
+ * @example
+ * // Invalid checksum
+ * validate("4006381333932")
+ * // → false
+ *
+ * @example
+ * // Invalid input
+ * validate("123ABC")
+ * // → false
+ */
 export const validate = (g) => {
   if (!g || typeof g !== 'string') {
     return false;
