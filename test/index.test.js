@@ -11,14 +11,17 @@ describe('GTIN Validation', () => {
     ['036000291452', true],
     ['123456789012', true],
     ['0701197200005', true],
+    ['4006381333931', true],
     ['10701197200002', true],
     ['1234567', false],
     ['abcdefgh', false],
     ['87654321', false],
     ['01234567890', false],
     ['03600029145', false],
+    ['4006381333932', false],
     ['999999999999', false],
-    ['', false]
+    ['ABC', false],
+    ['', false],
   ])('validate(%s) -> %s', (gtin, expected) => {
     expect(validate(gtin)).toBe(expected);
   });
@@ -61,7 +64,9 @@ describe('calculateChecksum', () => {
     ['036000291452', 2],
     ['123456789012', 2],
     ['0701197200005', 5],
-    ['10701197200002', 2]
+    ['4006381333931', 1],
+    ['10701197200002', 2],
+    ['ABC123', null],
   ])('calculateChecksum(%s) -> %s', (gtin, expected) => {
     expect(calculateChecksum(gtin)).toBe(expected);
   });
