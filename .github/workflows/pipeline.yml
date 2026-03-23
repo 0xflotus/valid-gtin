@@ -45,7 +45,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - uses: wagoid/commitlint-github-action@v6
+      - uses: wagoid/commitlint-github-action@main
   size:
     name: Check Size
     runs-on: ubuntu-slim
