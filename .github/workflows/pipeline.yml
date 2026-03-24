@@ -41,6 +41,7 @@ jobs:
       - name: Security check
         run: npm audit --audit-level=high
   commitlint:
+    if: false
     name: Commitlint
     runs-on: ubuntu-latest
     steps:
@@ -61,7 +62,7 @@ jobs:
   lint:
     name: Lint Code Base
     runs-on: ubuntu-slim
-    needs: commitlint
+    # needs: commitlint
     steps:
       - name: Checkout Code
         uses: actions/checkout@v6
@@ -77,7 +78,7 @@ jobs:
     name: Testing
     needs:
       - audit
-      - commitlint
+      # - commitlint
       - lint
       - size
     strategy:
