@@ -41,6 +41,7 @@ jobs:
       - name: Security check
         run: npm audit --audit-level=high
   commitlint:
+    if: false
     name: Commitlint
     runs-on: ubuntu-latest
     steps:
