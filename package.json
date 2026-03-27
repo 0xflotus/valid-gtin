@@ -1,6 +1,6 @@
 {
   "name": "valid-gtin",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "type": "module",
   "scripts": {
     "coverage": "vitest run --coverage",
