@@ -24,7 +24,7 @@
     "@eslint/js": "10.0.1",
     "@size-limit/preset-small-lib": "12.1.0",
     "@vitest/coverage-v8": "4.1.10",
-    "eslint": "10.6.0",
+    "eslint": "10.7.0",
     "fast-check": "4.9.0",
     "size-limit": "12.1.0",
     "terser": "5.49.0",
