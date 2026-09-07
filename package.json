@@ -23,12 +23,12 @@
   "devDependencies": {
     "@eslint/js": "10.0.1",
     "@size-limit/preset-small-lib": "13.0.3",
-    "@vitest/coverage-v8": "4.1.11",
+    "@vitest/coverage-v8": "5.0.0",
     "eslint": "10.9.1",
     "fast-check": "4.9.0",
     "size-limit": "13.0.3",
     "terser": "5.51.2",
-    "vitest": "4.1.11"
+    "vitest": "5.0.0"
   },
   "allowScripts": {
     "esbuild@0.28.2": true,
