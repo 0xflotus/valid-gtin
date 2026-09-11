@@ -4,11 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - '**/*.mjs'
-      - '**/*.js'
-      - '.github/workflows/*.yml'
-      - 'package.json'
   pull_request:
     branches:
       - main
