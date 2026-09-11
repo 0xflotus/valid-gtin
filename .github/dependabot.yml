@@ -1,23 +1,24 @@
 version: 2
 updates:
-  - package-ecosystem: "npm"
-    directory: "/"
+  - package-ecosystem: 'npm'
+    directory: '/'
     schedule:
-      interval: "daily"
-      time: "06:00"
-      timezone: "Europe/Berlin"
-    assignees:
-      - 0xflotus
+      interval: 'daily'
+      time: '09:00'
+      timezone: 'Europe/Berlin'
     open-pull-requests-limit: 5
+    cooldown:
+      default-days: 4
     groups:
-      patch-updates:
-        update-types:
-          - "patch"
-      dev-dependencies:
-        dependency-type: development
-  - package-ecosystem: "github-actions"
-    directory: "/"
+      vitest:
+        patterns:
+          - 'vitest'
+          - '@vitest/*'
+  - package-ecosystem: 'github-actions'
+    directory: '/'
     schedule:
-      interval: "weekly"
-    assignees:
-      - 0xflotus
+      interval: 'weekly'
+      day: 'sunday'
+      time: '09:00'
+      timezone: 'Europe/Berlin'
+    open-pull-requests-limit: 5
