@@ -25,7 +25,7 @@
     "@size-limit/preset-small-lib": "13.0.3",
     "@vitest/coverage-v8": "5.0.1",
     "eslint": "10.11.0",
-    "fast-check": "4.9.0",
+    "fast-check": "4.10.2",
     "size-limit": "14.0.0",
     "terser": "5.51.2",
     "vitest": "5.0.1"
