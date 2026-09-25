@@ -7,11 +7,6 @@ on:
   pull_request:
     branches:
       - main
-    paths:
-      - '**/*.mjs'
-      - '**/*.js'
-      - '.github/workflows/*.yml'
-      - 'package.json'
 
 concurrency:
   group: testing-${{ github.ref }}
