@@ -17,8 +17,7 @@ updates:
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
-      interval: 'weekly'
-      day: 'sunday'
-      time: '09:00'
+      interval: 'daily'
+      time: '09:15'
       timezone: 'Europe/Berlin'
     open-pull-requests-limit: 5
