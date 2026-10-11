@@ -6,7 +6,7 @@
     "coverage": "vitest run --coverage",
     "prepublishOnly": "npm run lint && npm run test && npm run minify",
     "lint": "eslint",
-    "minify": "terser src/index.js -o dist/index.js -c -m",
+    "minify": "terser src/index.js --output dist/index.js --compress drop_console=true,dead_code=true,passes=2 --mangle --format comments=false",
     "presize": "npm run minify",
     "size": "size-limit",
     "pretest": "npm run minify",
