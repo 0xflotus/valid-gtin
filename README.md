@@ -25,6 +25,10 @@ To run the tests please checkout this repository and run:
 
 `npm run test`
 
+The development toolchain uses [Vite+](https://viteplus.dev/) for linting,
+tests, and minified library builds. Install dependencies with `npm ci`; Vite+
+requires Node.js 22.18+, 24.11+, or 26+.
+
 ## Stargazers over time
 
 [![Stargazers over time](https://starchart.cc/0xflotus/valid-gtin.svg)](https://starchart.cc/0xflotus/valid-gtin)

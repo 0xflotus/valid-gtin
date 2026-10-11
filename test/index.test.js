@@ -1,6 +1,6 @@
-import { validate, calculateChecksum } from '../dist/index';
+import { validate, calculateChecksum } from '../dist/index.js';
 import fc from 'fast-check';
-import { describe, expect, it, test } from 'vitest';
+import { describe, expect, it, test } from 'vite-plus/test';
 
 describe('GTIN Validation', () => {
   it.each([
@@ -21,7 +21,7 @@ describe('GTIN Validation', () => {
     ['4006381333932', false],
     ['999999999999', false],
     ['ABC', false],
-    ['', false]
+    ['', false],
   ])('validate(%s) -> %s', (gtin, expected) => {
     expect(validate(gtin)).toBe(expected);
   });
@@ -32,7 +32,7 @@ describe('GTIN Validation', () => {
         if (!/^\d+$/.test(str)) {
           expect(validate(str)).toBe(false);
         }
-      })
+      }),
     );
   });
 
@@ -42,15 +42,15 @@ describe('GTIN Validation', () => {
         fc
           .array(fc.integer({ min: 0, max: 9 }), {
             minLength: 1,
-            maxLength: 20
+            maxLength: 20,
           })
           .map((arr) => arr.join('')),
         (digits) => {
           if (![8, 12, 13, 14].includes(digits.length)) {
             expect(validate(digits)).toBe(false);
           }
-        }
-      )
+        },
+      ),
     );
   });
 });
@@ -66,7 +66,7 @@ describe('calculateChecksum', () => {
     ['0701197200005', 5],
     ['4006381333931', 1],
     ['10701197200002', 2],
-    ['ABC123', null]
+    ['ABC123', null],
   ])('calculateChecksum(%s) -> %s', (gtin, expected) => {
     expect(calculateChecksum(gtin)).toBe(expected);
   });
@@ -88,7 +88,7 @@ describe('calculateChecksum', () => {
         if (/^\d{8}$|^\d{12,14}$/.test(str)) return true;
 
         return calculateChecksum(str) === null;
-      })
+      }),
     );
   });
 });
@@ -100,7 +100,7 @@ test('checksum is always a digit', () => {
       if (checksum === null) return true;
 
       return checksum >= 0 && checksum <= 9;
-    })
+    }),
   );
 });
 
@@ -113,7 +113,7 @@ test('wrong checksum should fail validation', () => {
       const wrong = (checksum + 1) % 10;
 
       return !validate(body + wrong);
-    })
+    }),
   );
 });
 
@@ -127,6 +127,6 @@ test('generated GTIN with calculated checksum should validate', () => {
       const gtin = body + checksum;
 
       return validate(gtin);
-    })
+    }),
   );
 });
