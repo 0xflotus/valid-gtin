@@ -90,7 +90,7 @@ jobs:
             macos-latest,
             windows-2025,
             windows-11-arm,
-            windows-latest
+            windows-latest,
           ]
     runs-on: ${{ matrix.os }}
     steps:

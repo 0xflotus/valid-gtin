@@ -6,10 +6,10 @@ export default defineConfig({
     format: 'esm',
     minify: true,
     outDir: 'dist',
-    outExtensions: () => ({ js: '.js' })
+    outExtensions: () => ({ js: '.js' }),
   },
   lint: {
-    ignorePatterns: ['coverage/**', 'dist/**']
+    ignorePatterns: ['coverage/**', 'dist/**'],
   },
   fmt: {
     semi: true,
@@ -17,6 +17,6 @@ export default defineConfig({
     trailingComma: 'all',
     printWidth: 80,
     tabWidth: 2,
-    endOfLine: 'lf'
-  }
+    endOfLine: 'lf',
+  },
 });
