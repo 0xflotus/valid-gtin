@@ -1,6 +1,6 @@
-import { validate, calculateChecksum } from '../dist/index';
+import { validate, calculateChecksum } from '../dist/index.js';
 import fc from 'fast-check';
-import { describe, expect, it, test } from 'vitest';
+import { describe, expect, it, test } from 'vite-plus/test';
 
 describe('GTIN Validation', () => {
   it.each([

@@ -10,10 +10,10 @@ updates:
     cooldown:
       default-days: 3
     groups:
-      vitest:
+      vite-plus:
         patterns:
-          - 'vitest'
-          - '@vitest/*'
+          - 'vite-plus'
+          - '@voidzero-dev/vite-plus-*'
       size-limit:
         patterns:
           - 'size-limit'
