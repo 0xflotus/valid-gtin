@@ -24,7 +24,6 @@
   },
   "devDependencies": {
     "@size-limit/preset-small-lib": "14.2.0",
-    "@vitest/coverage-v8": "5.0.4",
     "fast-check": "4.10.2",
     "size-limit": "14.2.0",
     "vite-plus": "1.1.0"
