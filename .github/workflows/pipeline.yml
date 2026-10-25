@@ -22,7 +22,7 @@ jobs:
           node-version: 24
           cache: npm
       - name: Install dependencies
-        run: npm ci
+        run: npm clean-install
       - name: Security check
         run: npm audit --audit-level=high
   commitlint:
@@ -44,7 +44,7 @@ jobs:
       - uses: voidzero-dev/setup-vp@68f39c78aaf39be468cabd2afb09c162574c84af # v1.21.2
         with:
           node-manager: false
-      - run: npm ci
+      - run: npm clean-install
       - run: npm run size
   lint:
     name: Lint Code Base
@@ -62,7 +62,7 @@ jobs:
       - uses: voidzero-dev/setup-vp@68f39c78aaf39be468cabd2afb09c162574c84af # v1.21.2
         with:
           node-manager: false
-      - run: npm ci
+      - run: npm clean-install
       - run: npm run check
   test:
     name: Testing
@@ -103,5 +103,5 @@ jobs:
       - uses: voidzero-dev/setup-vp@68f39c78aaf39be468cabd2afb09c162574c84af # v1.21.2
         with:
           node-manager: false
-      - run: npm ci
+      - run: npm clean-install
       - run: npm run coverage
