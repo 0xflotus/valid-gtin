@@ -8,7 +8,7 @@ updates:
       timezone: 'Europe/Berlin'
     open-pull-requests-limit: 5
     cooldown:
-      default-days: 3
+      default-days: 0
     groups:
       vite-plus:
         patterns:
