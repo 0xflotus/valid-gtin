@@ -107,4 +107,5 @@ jobs:
         with:
           node-manager: false
       - run: npm clean-install
+      - run: npm run minify
       - run: npm run coverage
