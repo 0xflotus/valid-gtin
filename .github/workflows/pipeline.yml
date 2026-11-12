@@ -45,7 +45,7 @@ jobs:
         with:
           node-manager: false
       - run: npm clean-install
-      - run: npm run size
+      - run: npm run minify && npm run size
   lint:
     name: Lint Code Base
     runs-on: ubuntu-slim
