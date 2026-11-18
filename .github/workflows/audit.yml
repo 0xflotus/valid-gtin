@@ -3,6 +3,8 @@ name: npm Audit
 on:
   schedule:
     - cron: '30 0 * * *'
+  pull_request:
+  push:
   workflow_dispatch:
 
 jobs:
