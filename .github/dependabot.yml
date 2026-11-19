@@ -14,7 +14,6 @@ updates:
         patterns:
           - 'vite-plus'
           - '@voidzero-dev/vite-plus-*'
-          - '@vitest/*'
       size-limit:
         patterns:
           - 'size-limit'
