@@ -13,6 +13,7 @@ updates:
       vite-plus:
         patterns:
           - 'vite-plus'
+          - '@vitest/coverage-v8'
           - '@voidzero-dev/vite-plus-*'
       size-limit:
         patterns:
