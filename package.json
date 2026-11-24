@@ -27,7 +27,7 @@
     "@vitest/coverage-v8": "5.1.0",
     "fast-check": "4.11.0",
     "size-limit": "14.3.0",
-    "vite-plus": "1.7.0"
+    "vite-plus": "1.8.0"
   },
   "allowScripts": {
     "esbuild@0.28.2": true,
